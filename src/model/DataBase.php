@@ -36,7 +36,9 @@ class DataBase {
   {
     return $this->conn;
   }
-  public function unstepDO(){
+  //Metodo para cerrar la conexión
+  public function unstepDO()
+  {
     unset($this->conn);
   }
 }
