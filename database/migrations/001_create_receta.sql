@@ -54,12 +54,15 @@ CREATE TABLE IF NOT EXISTS `item_supplier` (
 -- Volcando estructura para tabla sbcobros.supplier
 CREATE TABLE IF NOT EXISTS `supplier` (
   `supplier_id` int NOT NULL AUTO_INCREMENT,
+  `code` varchar(25) NOT NULL,
   `name` varchar(100) NOT NULL,
   `country` varchar(50) DEFAULT NULL,
   `is_active` tinyint(1) DEFAULT '1',
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`supplier_id`)
+  PRIMARY KEY (`supplier_id`),
+  UNIQUE KEY `code_UNIQUE` (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 -- La exportación de datos fue deseleccionada.
 
