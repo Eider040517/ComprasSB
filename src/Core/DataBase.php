@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . '/../../config.php';
+namespace App\Core;
+use PDO;
+use PDOException;
 class DataBase {
   // Instancia única de la clase (patrón Singleton)
   private static $instance = null;
@@ -43,3 +45,4 @@ class DataBase {
   }
 }
 
+DataBase::getInstance(); // Inicializar la conexión al cargar el script

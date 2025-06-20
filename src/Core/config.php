@@ -1,4 +1,5 @@
 <?php
+namespace App\Core;
 // Function to read .env file
 function loadEnv($path) {
     if(!file_exists($path)) {
@@ -24,7 +25,7 @@ function loadEnv($path) {
 }
 
 // Load environment variables
-loadEnv(__DIR__ . '/.env');
+loadEnv(__DIR__ . '/../../.env');
 
 // Define the base path for includes
 define('BASE_PATH', __DIR__ . '/');
